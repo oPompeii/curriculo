@@ -4,448 +4,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
     <title>Matheus Pompei | Desenvolvedor Front-End</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --bg: #0f172a;
-            --text: #f1f5f9;
-            --card: #1e293b;
-            --card-hover: #334155;
-            --accent: #38bdf8;
-            --footer: #020617;
-            --subtext: #94a3b8;
-        }
 
-        .light-mode {
-            --bg: #f8fafc;
-            --text: #0f172a;
-            --card: #ffffff;
-            --card-hover: #e2e8f0;
-            --accent: #0284c7;
-            --footer: #e2e8f0;
-            --subtext: #475569;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Inter", sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: var(--bg);
-            color: var(--text);
-            transition: 0.3s;
-        }
-
-        header {
-            padding: 140px 10%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        header h1 {
-            font-size: 64px;
-            font-weight: 900;
-            line-height: 1.1;
-        }
-
-        .highlight {
-            color: var(--accent);
-        }
-
-        header p {
-            font-size: 22px;
-            margin-top: 20px;
-            color: var(--subtext);
-            max-width: 600px;
-        }
-
-        .button-group {
-            margin-top: 35px;
-        }
-
-        button {
-            padding: 14px 32px;
-            border-radius: 30px;
-            border: none;
-            background: var(--accent);
-            color: #0f172a;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-            margin-right: 15px;
-        }
-
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
-        }
-
-        .secondary {
-            background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-        }
-
-        .secondary:hover {
-            background: var(--accent);
-            color: #0f172a;
-        }
-
-        section {
-            padding: 100px 10%;
-        }
-
-        h2 {
-            font-size: 36px;
-            margin-bottom: 50px;
-        }
-
-        .about {
-            max-width: 700px;
-            color: var(--subtext);
-            font-size: 18px;
-            line-height: 1.7;
-        }
-
-        .stats {
-            display: flex;
-            gap: 60px;
-            margin-top: 50px;
-        }
-
-        .stat h3 {
-            font-size: 40px;
-            color: var(--accent);
-        }
-
-        .stat p {
-            color: var(--subtext);
-        }
-
-        .card {
-            background: var(--card);
-            padding: 40px;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            background: var(--card-hover);
-        }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 25px;
-        }
-
-        .skill {
-            background: var(--card);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .skill:hover {
-            transform: translateY(-6px);
-            background: var(--card-hover);
-        }
-
-        .skill img {
-            width: 40px;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--footer);
-            color: var(--subtext);
-        }
-
-        @media(max-width:768px) {
-
-            header h1 {
-                font-size: 42px;
-            }
-
-            .stats {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-        }
-    </style>
 </head>
 
 <body>
-
-    <header>
-
-        <h1 id="tituloHero">Olá, eu sou <span class="highlight">Matheus Pompei</span></h1>
-
-        <p id="descHero">
-            Desenvolvedor Front-End focado em criar interfaces modernas, intuitivas e performáticas utilizando React e
-            tecnologias atuais.
-        </p>
-
-        <div class="button-group">
-
-            <button onclick="mostrarContato()" id="btnContato">Entrar em Contato</button>
-
-            <button class="secondary" onclick="irLinkedin()">LinkedIn</button>
-
-            <button class="secondary" onclick="toggleTheme()">🌙 / ☀️</button>
-
-            <button onclick="toggleLanguage()" class="lang-btn">EN</button>
-
+    <nav>
+        <ul>
+            <!-- <li><a href="#">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#skills">Skills</a></li> -->
+        </ul>
+        <div class="nav-btns">
+            <button onclick="abrirContato()" id="btnContato">Contato</button>
+            <button class="secondary" onclick="toggleTheme()" style="padding: 8px 15px;">🌙/☀️</button>
+            <button onclick="toggleLanguage()" class="lang-btn" style="padding: 8px 15px;">EN</button>
         </div>
+    </nav>
 
-        <p id="contato" style="display:none;margin-top:20px;color:var(--subtext)">
-            📱 (11) 96550-4631 <br>
-            📧 matheus.pompei7@gmail.com <br>
-            📍 São Paulo
-        </p>
-
+    <header class="hero">
+        <div class="hero-text">
+            <h1 id="tituloHero">Olá, eu sou <span class="highlight">Matheus Pompei</span></h1>
+            <p id="descHero">
+                Estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor Front-End em formação, com foco na
+                criação de interfaces modernas e responsivas.
+            </p>
+            <div class="button-group">
+                <!-- <button onclick="abrirContato()" id="btnContato">Entrar em Contato</button> -->
+                <button class="secondary" onclick="irLinkedin()">LinkedIn</button>
+                <button onclick="abrirCarta()" id="btnCarta">Sobre mim</button>
+                <button class="secondary" onclick="irGithub()">Github</button>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="img/foto.png" alt="Matheus Pompei">
+        </div>
     </header>
+    <div id="popupContato" class="popup">
+        <div class="popup-content">
+            <span class="fechar" onclick="fecharContato()">✖</span>
+            <h2>Contato</h2>
 
+            <div style="margin-top:20px; line-height:2;">
 
-    <section>
+                <p>
+                    <img src="img/whatsapp.png" width="35">
+                    <a href="https://wa.me/5511965504631" target="_blank">WhatsApp</a>
+                </p>
 
-        <h2 id="tituloSobre">Sobre Mim</h2>
+                <p>
+                    <img src="https://skillicons.dev/icons?i=gmail" width="35">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=matheus.pompei7@gmail.com" target="_blank"
+                        rel="noopener noreferrer">
+                        Enviar Email
+                    </a>
+                </p>
 
-        <div class="about" id="textoSobre">
-            Sou estudante de Análise e Desenvolvimento de Sistemas e apaixonado por desenvolvimento front-end. Tenho
-            experiência na criação de interfaces responsivas, integração com banco de dados e prototipação de soluções
-            focadas na experiência do usuário.
+                <!-- <p>
+                    <img src="https://skillicons.dev/icons?i=github" width="35">
+                    <a href="https://github.com/oPompeii" target="_blank">GitHub</a>
+                </p> -->
+
+            </div>
+
         </div>
-
+    </div>
+    </div>
+    <section id="sobre">
+        <h2 id="tituloSobre">Sobre Mim</h2>
         <div class="stats">
-
-            <div class="stat">
+            <div class="stat" onclick="abrirProjetos()">
                 <h3>3+</h3>
                 <p id="stat1">Projetos Desenvolvidos</p>
+                <small>(Clique para ver)</small>
             </div>
-
-            <div class="stat">
-                <h3>2+</h3>
+            <div class="stat" onclick="abrirEstudos()">
+                <h3>4+</h3>
                 <p id="stat2">Anos de Estudo</p>
+                <small>(Clique para ver)</small>
             </div>
-
             <div class="stat">
                 <h3>100%</h3>
                 <p id="stat3">Foco em Evolução</p>
             </div>
-
         </div>
-
     </section>
 
-
-    <section>
-
+    <!-- <section>
         <h2 id="tituloFormacao">Formação</h2>
-
         <div class="card">
-
             <strong id="form1">Ensino Médio Técnico em Multimídia</strong><br>
             SENAC (2023 - 2025)<br><br>
-
             <span id="form1txt">
                 Formação técnica com foco em design digital, produção multimídia, desenvolvimento web e fundamentos de
                 programação.
             </span>
-
         </div>
-
         <div class="card">
-
             <strong id="form2">Análise e Desenvolvimento de Sistemas</strong><br>
             SENAC (2026 - 2028)<br><br>
-
             <span id="form2txt">
                 Graduação voltada para desenvolvimento de software, banco de dados, engenharia de requisitos e boas
                 práticas de programação.
             </span>
-
         </div>
+    </section> -->
 
-    </section>
-
-
-    <section>
-
-        <h2 id="tituloProjetos">Projetos</h2>
-
-        <div class="card">
-
-            <strong>FAST PAY</strong><br><br>
-
-            <span id="proj1">
-                Plataforma de carteira de criptomoeda desenvolvida com React e Supabase, focada em segurança,
-                performance e experiência do usuário.
-            </span>
-
-        </div>
-
-        <div class="card">
-
-            <strong>GAME ONLINE</strong><br><br>
-
-            <span id="proj2">
-                Aplicação com melhoria de interface e integração com banco de dados SQL, garantindo melhor organização e
-                fluxo de dados.
-            </span>
-
-        </div>
-
-        <div class="card">
-
-            <strong>SECURITY PAY</strong><br><br>
-
-            <span id="proj3">
-                Projeto criado no Empreenda SENAC com foco em design no Figma e implementação com React.
-            </span>
-
-        </div>
-
-    </section>
-
-
-    <section>
-
+    <section id="skills">
         <h2 id="tituloSkills">Habilidades</h2>
-
         <div class="skills">
 
-            <div class="skill">
-                <img src="img/react.png">
+            <div class="skill"><img src="https://skillicons.dev/icons?i=react">
                 <p>React</p>
             </div>
 
-            <div class="skill">
-                <img src="img/javascript.png">
+            <div class="skill"><img src="https://skillicons.dev/icons?i=javascript">
                 <p>JavaScript</p>
             </div>
 
-            <div class="skill">
-                <img src="img/html.png">
+            <div class="skill"><img src="https://skillicons.dev/icons?i=html">
                 <p>HTML5</p>
             </div>
 
-            <div class="skill">
-                <img src="img/css.png">
+            <div class="skill"><img src="https://skillicons.dev/icons?i=css">
                 <p>CSS3</p>
             </div>
 
-            <div class="skill">
-                <img src="img/sql.png">
-                <p>SQL</p>
-            </div>
-
-            <div class="skill">
-                <img src="img/figma.png">
+            <div class="skill"><img src="https://skillicons.dev/icons?i=figma">
                 <p>Figma</p>
             </div>
 
-            <div class="skill">
-                <img src="img/java.jpg">
+            <div class="skill"><img src="https://skillicons.dev/icons?i=mysql">
+                <p>SQL</p>
+            </div>
+
+            <div class="skill"><img src="https://skillicons.dev/icons?i=java">
                 <p>Java</p>
             </div>
 
-        </div>
+            <div class="skill"><img src="https://skillicons.dev/icons?i=lua">
+                <p>Lua</p>
+            </div>
 
+        </div>
     </section>
 
+    <div id="popupCarta" class="popup">
+        <div class="popup-content">
+            <span class="fechar" onclick="fecharCarta()">✖</span>
+            <h2 id="tituloCarta">Carta de Apresentação</h2>
+            <p id="p1Carta" style="margin-bottom: 15px;">Muito prazer, eu sou o Matheus. Minha jornada na tecnologia
+                começou com a curiosidade de entender como as interfaces conectam pessoas a soluções.</p>
+            <p id="p2Carta" style="margin-bottom: 15px;">Hoje, como estudante de ADS, foco meus estudos no
+                desenvolvimento Front-End moderno. No meu arsenal técnico, conto com React e JavaScript.</p>
+            <p id="p3Carta">Acredito que o bom desenvolvedor nunca para de aprender. Dedico meu tempo a aprimorar minhas
+                habilidades em arquitetura de componentes e design UX/UI.</p>
+        </div>
+    </div>
+
+    <div id="popupProjetos" class="popup">
+        <div class="popup-content">
+            <span class="fechar" onclick="fecharProjetos()">✖</span>
+            <h2 id="tituloProjPopup">Projetos e Experiências</h2>
+            <div id="listaProjetos" style="text-align: left; line-height: 1.8; margin-top: 20px;">
+                <p>🚀 <strong>Fast Pay:</strong> Desenvolvimento de plataforma de carteira de criptomoedas utilizando
+                    React e Supabase.</p>
+                <p>🎮 <strong>Game Online:</strong> Ajustes e melhorias de interface em jogo online e manipulação de
+                    SQL.</p>
+                <p>🔐 <strong>Security Pay:</strong> Prototipação no Figma e implementação da interface com React.</p>
+                <p>🎨 <strong>UX e UI Design:</strong> Criação de layouts de alta fidelidade utilizando Figma.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupEstudos" class="popup">
+        <div class="popup-content">
+            <span class="fechar" onclick="fecharEstudos()">✖</span>
+            <h2 id="tituloEstudos">Minha Trajetória de Estudos</h2>
+            <div id="corpoEstudos" style="text-align: left; line-height: 1.8; margin-top: 20px;">
+                <p>🎓 <strong>Análise e Desenvolvimento de Sistemas:</strong> Formação em lógica, banco de dados e
+                    engenharia de sistemas.</p>
+
+                <p>🎨 <strong>UX/UI Design (Senac):</strong> Criação de interfaces digitais e experiência do usuário no
+                    Figma.</p>
+
+                <p>🎓 <strong>Multimídia:</strong> Formação focada em criação de conteúdos digitais, design de
+                    interfaces e produção multimídia, desenvolvendo habilidades em comunicação visual, experiência do
+                    usuário e uso de ferramentas de design.</p>
+            </div>
+        </div>
+    </div>
 
     <footer>
-
-        © 2026 Matheus Pompei • Desenvolvedor Front-End
-
+        © 2026 Matheus Pompei • <span id="footerText">Desenvolvedor Front-End</span>
     </footer>
+    <script src="script.js"></script>
 
-
-    <script>
-
-        function mostrarContato() {
-            const contato = document.getElementById("contato");
-            contato.style.display = contato.style.display === "none" ? "block" : "none";
-        }
-
-        function irLinkedin() {
-            window.open("https://www.linkedin.com/in/matheus-pompei", "_blank");
-        }
-
-        function toggleTheme() {
-            document.body.classList.toggle("light-mode");
-        }
-
-        let idioma = "pt";
-
-        function toggleLanguage() {
-
-            if (idioma === "pt") {
-
-                document.getElementById("tituloHero").innerHTML = 'Hello, I am <span class="highlight">Matheus Pompei</span>';
-
-                document.getElementById("descHero").innerText = "Front-End Developer focused on building modern, intuitive and high performance interfaces using React and modern technologies.";
-
-                document.getElementById("btnContato").innerText = "Contact";
-
-                document.getElementById("tituloSobre").innerText = "About Me";
-
-                document.getElementById("textoSobre").innerText = "I am a Systems Analysis and Development student passionate about front-end development. I have experience building responsive interfaces, database integration and user-focused solutions.";
-
-                document.getElementById("stat1").innerText = "Projects Developed";
-                document.getElementById("stat2").innerText = "Years Studying";
-                document.getElementById("stat3").innerText = "Focus on Growth";
-
-                document.getElementById("tituloFormacao").innerText = "Education";
-
-                document.getElementById("form1").innerText = "Technical High School in Multimedia";
-
-                document.getElementById("form1txt").innerText = "Technical education focused on digital design, multimedia production, web development and programming fundamentals.";
-
-                document.getElementById("form2").innerText = "Systems Analysis and Development";
-
-                document.getElementById("form2txt").innerText = "Degree focused on software development, databases, requirements engineering and programming best practices.";
-
-                document.getElementById("tituloProjetos").innerText = "Projects";
-
-                document.getElementById("proj1").innerText = "Cryptocurrency wallet platform built with React and Supabase focused on security and performance.";
-
-                document.getElementById("proj2").innerText = "Application with improved interface and SQL database integration.";
-
-                document.getElementById("proj3").innerText = "Project created at Empreenda SENAC focusing on design in Figma and implementation with React.";
-
-                document.getElementById("tituloSkills").innerText = "Skills";
-
-                document.querySelector(".lang-btn").innerText = "PT";
-
-                idioma = "en";
-
-            } else {
-
-                location.reload();
-
-            }
-
-        }
-
-    </script>
 
 </body>
 
