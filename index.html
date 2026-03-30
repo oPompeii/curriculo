@@ -17,9 +17,9 @@
 <body>
     <nav>
         <ul>
-            <!-- <li><a href="#">Home</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#skills">Skills</a></li> -->
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#skills">Skills</a></li>
         </ul>
         <div class="nav-btns">
             <button onclick="abrirContato()" id="btnContato">Contato</button>
@@ -31,14 +31,15 @@
     <header class="hero">
         <div class="hero-text">
             <h1 id="tituloHero">Olá, eu sou <span class="highlight">Matheus Pompei</span></h1>
-            <p id="descHero">
+            <!-- <p id="descHero">
                 Estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor Front-End em formação, com foco na
                 criação de interfaces modernas e responsivas.
-            </p>
+            </p> -->
             <div class="button-group">
-                <!-- <button onclick="abrirContato()" id="btnContato">Entrar em Contato</button> -->
+                <!-- <button onclick="document.getElementById('projetos').scrollIntoView({behavior:'smooth'})"
+                    id="btnProjetos">Ver Projetos</button> -->
                 <button class="secondary" onclick="irLinkedin()">LinkedIn</button>
-                <button onclick="abrirCarta()" id="btnCarta">Sobre mim</button>
+                <button class="secondary" onclick="abrirCarta()" id="btnCarta">Sobre mim</button>
                 <button class="secondary" onclick="irGithub()">Github</button>
             </div>
         </div>
@@ -76,27 +77,41 @@
         </div>
     </div>
     </div>
-    <section id="sobre">
-        <h2 id="tituloSobre">Sobre Mim</h2>
-        <div class="stats">
-            <div class="stat" onclick="abrirProjetos()">
-                <h3>3+</h3>
-                <p id="stat1">Projetos Desenvolvidos</p>
-                <small>(Clique para ver)</small>
+
+
+    <!-- SEÇÃO PROJETOS -->
+    <section id="projetos">
+        <h2 id="tituloProjetos">Projetos</h2>
+        <div class="projetos-grid">
+            <div class="projeto-card">
+                <div class="projeto-icon">🚀</div>
+                <h3>Fast Pay</h3>
+                <p id="proj1desc">Plataforma de carteira de criptomoedas desenvolvida com React e Supabase.</p>
+                <div class="projeto-tags"><span>React</span><span>Supabase</span></div>
             </div>
-            <div class="stat" onclick="abrirEstudos()">
-                <h3>4+</h3>
-                <p id="stat2">Anos de Estudo</p>
-                <small>(Clique para ver)</small>
+            <div class="projeto-card">
+                <div class="projeto-icon">🎮</div>
+                <h3>Game Online</h3>
+                <p id="proj2desc">Ajustes e melhorias de interface em jogo online e manipulação de SQL.</p>
+                <div class="projeto-tags"><span>UI/UX</span><span>SQL</span></div>
             </div>
-            <!--<div class="stat">
-                <h3>100%</h3>
-                <p id="stat3">Foco em Evolução</p>
-            </div> -->
+            <div class="projeto-card">
+                <div class="projeto-icon">🔐</div>
+                <h3>Security Pay</h3>
+                <p id="proj3desc">Prototipação no Figma e implementação da interface com React.</p>
+                <div class="projeto-tags"><span>Figma</span><span>React</span></div>
+            </div>
+            <div class="projeto-card">
+                <div class="projeto-icon">🎨</div>
+                <h3>UX e UI Design</h3>
+                <p id="proj4desc">Criação de layouts de alta fidelidade utilizando Figma.</p>
+                <div class="projeto-tags"><span>Figma</span><span>UI/UX</span></div>
+            </div>
         </div>
     </section>
 
-    <!-- <section>
+    <!-- SEÇÃO FORMAÇÃO -->
+    <section id="formacao">
         <h2 id="tituloFormacao">Formação</h2>
         <div class="card">
             <strong id="form1">Ensino Médio Técnico em Multimídia</strong><br>
@@ -114,42 +129,112 @@
                 práticas de programação.
             </span>
         </div>
-    </section> -->
-
-    <section id="skills">
+    </section>
+    <section id="id-skills">
         <h2 id="tituloSkills">Habilidades</h2>
         <div class="skills">
 
-            <div class="skill"><img src="https://skillicons.dev/icons?i=react">
-                <p>React</p>
+            <div class="skill">
+                <img src="https://skillicons.dev/icons?i=react" alt="React">
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <p>React</p>
+                        <span>40%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-bar" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill">
+                <img src="https://skillicons.dev/icons?i=java" alt="Java">
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <p>Java</p>
+                        <span>65%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-bar" style="width: 65%;"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="skill"><img src="https://skillicons.dev/icons?i=javascript">
-                <p>JavaScript</p>
+            <div class="skill">
+                <img src="https://skillicons.dev/icons?i=javascript" alt="JavaScript">
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <p>JavaScript</p>
+                        <span>35%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-bar" style="width: 35%;"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="skill"><img src="https://skillicons.dev/icons?i=html">
-                <p>HTML5</p>
+            <div class="skill">
+                <img src="https://skillicons.dev/icons?i=html" alt="HTML5">
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <p>HTML5</p>
+                        <span>40%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-bar" style="width: 40%;"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="skill"><img src="https://skillicons.dev/icons?i=css">
-                <p>CSS3</p>
+            <div class="skill">
+                <img src="https://skillicons.dev/icons?i=css" alt="CSS3">
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <p>CSS3</p>
+                        <span>40%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-bar" style="width: 40%;"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="skill"><img src="https://skillicons.dev/icons?i=figma">
-                <p>Figma</p>
+            <div class="skill">
+                <img src="https://skillicons.dev/icons?i=figma" alt="Figma">
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <p>Figma</p>
+                        <span>70%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="skill"><img src="https://skillicons.dev/icons?i=mysql">
-                <p>SQL</p>
+            <div class="skill">
+                <img src="https://skillicons.dev/icons?i=mysql" alt="SQL">
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <p>SQL</p>
+                        <span>55%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-bar" style="width: 55%;"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="skill"><img src="https://skillicons.dev/icons?i=java">
-                <p>Java</p>
-            </div>
-
-            <div class="skill"><img src="https://skillicons.dev/icons?i=lua">
-                <p>Lua</p>
+            <div class="skill">
+                <img src="https://skillicons.dev/icons?i=lua" alt="Lua">
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <p>Lua</p>
+                        <span>50%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-bar" style="width: 50%;"></div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -159,12 +244,18 @@
         <div class="popup-content">
             <span class="fechar" onclick="fecharCarta()">✖</span>
             <h2 id="tituloCarta">Carta de Apresentação</h2>
-            <p id="p1Carta" style="margin-bottom: 15px;">Muito prazer, eu sou o Matheus. Minha jornada na tecnologia
-                começou com a curiosidade de entender como as interfaces conectam pessoas a soluções.</p>
-            <p id="p2Carta" style="margin-bottom: 15px;">Hoje, como estudante de ADS, foco meus estudos no
-                desenvolvimento Front-End moderno. No meu arsenal técnico, conto com React e JavaScript.</p>
-            <p id="p3Carta">Acredito que o bom desenvolvedor nunca para de aprender. Dedico meu tempo a aprimorar minhas
-                habilidades em design UX/UI.</p>
+            <p id="p1Carta" style="margin-bottom: 15px;">Olá! Sou o Matheus, estudante de Análise e Desenvolvimento
+                de Sistemas com experiência prática em desenvolvimento Front-End e UI/UX Design.</p>
+            <p id="p2Carta" style="margin-bottom: 15px;">Ao longo da minha trajetória, desenvolvi projetos reais
+                como o <strong>Fast Pay</strong>, uma plataforma de carteira de criptomoedas com React e Supabase, e
+                o <strong>Security Pay</strong>, onde cuidei desde a prototipagem no Figma até a implementação
+                final. Essa visão completa — do design ao código — é o que me diferencia.</p>
+            <p id="p3Carta" style="margin-bottom: 15px;">Domino <strong>React, JavaScript, HTML, CSS</strong> e
+                tenho experiência com <strong>Figma</strong> para criação de interfaces de alta fidelidade. Estou
+                sempre buscando evoluir, seja em arquitetura de componentes, boas práticas de código ou experiência
+                do usuário.</p>
+            <p id="p4Carta">Estou em busca de uma oportunidade de <strong>estágio ou vaga júnior</strong> onde eu
+                possa contribuir de verdade e crescer junto com o time. Topa me dar essa chance?</p>
         </div>
     </div>
 
@@ -173,11 +264,13 @@
             <span class="fechar" onclick="fecharProjetos()">✖</span>
             <h2 id="tituloProjPopup">Projetos e Experiências</h2>
             <div id="listaProjetos" style="text-align: left; line-height: 1.8; margin-top: 20px;">
-                <p>🚀 <strong>Fast Pay:</strong> Desenvolvimento de plataforma de carteira de criptomoedas utilizando
+                <p>🚀 <strong>Fast Pay:</strong> Desenvolvimento de plataforma de carteira de criptomoedas
+                    utilizando
                     React e Supabase.</p>
                 <p>🎮 <strong>Game Online:</strong> Ajustes e melhorias de interface em jogo online e manipulação de
                     SQL.</p>
-                <p>🔐 <strong>Security Pay:</strong> Prototipação no Figma e implementação da interface com React.</p>
+                <p>🔐 <strong>Security Pay:</strong> Prototipação no Figma e implementação da interface com React.
+                </p>
                 <p>🎨 <strong>UX e UI Design:</strong> Criação de layouts de alta fidelidade utilizando Figma.</p>
             </div>
         </div>
@@ -191,11 +284,13 @@
                 <p>🎓 <strong>Análise e Desenvolvimento de Sistemas:</strong> Formação em lógica, banco de dados e
                     engenharia de sistemas.</p>
 
-                <p>🎨 <strong>UX/UI Design (Senac):</strong> Criação de interfaces digitais e experiência do usuário no
+                <p>🎨 <strong>UX/UI Design (Senac):</strong> Criação de interfaces digitais e experiência do usuário
+                    no
                     Figma.</p>
 
                 <p>🎓 <strong>Multimídia:</strong> Formação focada em criação de conteúdos digitais, design de
-                    interfaces e produção multimídia, desenvolvendo habilidades em comunicação visual, experiência do
+                    interfaces e produção multimídia, desenvolvendo habilidades em comunicação visual, experiência
+                    do
                     usuário e uso de ferramentas de design.</p>
             </div>
         </div>
