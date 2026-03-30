@@ -49,19 +49,17 @@ function toggleLanguage() {
     setText("stat3", "Focus on Evolution");
     setText("tituloSkills", "Skills");
     setText("tituloCarta", "Cover Letter");
-    setText(
-      "p1Carta",
-      "Pleased to meet you, I'm Matheus. My journey in technology began with a curiosity to understand how interfaces connect people to solutions.",
-    );
-    setText(
-      "p2Carta",
-      "As an ADS student, I focus my studies on modern Front-End development. My technical toolkit includes React and JavaScript.",
-    );
-    setText(
-      "p3Carta",
-      "I believe a good developer never stops learning. I dedicate my time to improving my skills in component architecture and UX/UI design.",
-    );
+    setText("p1Carta", "Hi! I'm Matheus, a Systems Analysis and Development student with hands-on experience in Front-End development and UI/UX Design.");
+    setText("p2Carta", "Throughout my journey, I've built real projects like Fast Pay, a cryptocurrency wallet platform using React and Supabase, and Security Pay, where I handled everything from Figma prototyping to final implementation. That full-cycle vision — from design to code — is what sets me apart.");
+    setText("p3Carta", "I'm proficient in React, JavaScript, HTML, CSS and experienced with Figma for high-fidelity interface design. I'm always looking to grow, whether in component architecture, coding best practices, or user experience.");
+    setText("p4Carta", "I'm looking for an internship or junior developer opportunity where I can make a real contribution and grow alongside the team. Ready to give me that chance?");
     setText("footerText", "Front-End Developer");
+    setText("tituloProjetos", "Projects");
+    setText("btnProjetos", "View Projects");
+    setText("proj1desc", "Cryptocurrency wallet platform developed with React and Supabase.");
+    setText("proj2desc", "UI improvements and SQL manipulation in an online game.");
+    setText("proj3desc", "Figma prototyping and interface implementation with React.");
+    setText("proj4desc", "High-fidelity layout creation using Figma.");
     setText("tituloFormacao", "Education");
     setText("form1", "Technical High School in Multimedia");
     setText(
@@ -116,19 +114,17 @@ function toggleLanguage() {
     setText("stat3", "Foco em Evolução");
     setText("tituloSkills", "Habilidades");
     setText("tituloCarta", "Carta de Apresentação");
-    setText(
-      "p1Carta",
-      "Muito prazer, eu sou o Matheus. Minha jornada na tecnologia começou com a curiosidade de entender como as interfaces conectam pessoas a soluções.",
-    );
-    setText(
-      "p2Carta",
-      "Hoje, como estudante de ADS, foco meus estudos no desenvolvimento Front-End moderno. No meu arsenal técnico, conto com React e JavaScript.",
-    );
-    setText(
-      "p3Carta",
-      "Acredito que o bom desenvolvedor nunca para de aprender. Dedico meu tempo a aprimorar minhas habilidades em arquitetura de componentes e design UX/UI.",
-    );
+    setText("p1Carta", "Olá! Sou o Matheus, estudante de Análise e Desenvolvimento de Sistemas com experiência prática em desenvolvimento Front-End e UI/UX Design.");
+    setText("p2Carta", "Ao longo da minha trajetória, desenvolvi projetos reais como o Fast Pay, uma plataforma de carteira de criptomoedas com React e Supabase, e o Security Pay, onde cuidei desde a prototipagem no Figma até a implementação final. Essa visão completa — do design ao código — é o que me diferencia.");
+    setText("p3Carta", "Domino React, JavaScript, HTML, CSS e tenho experiência com Figma para criação de interfaces de alta fidelidade. Estou sempre buscando evoluir, seja em arquitetura de componentes, boas práticas de código ou experiência do usuário.");
+    setText("p4Carta", "Estou em busca de uma oportunidade de estágio ou vaga júnior onde eu possa contribuir de verdade e crescer junto com o time. Topa me dar essa chance?");
     setText("footerText", "Desenvolvedor Front-End");
+    setText("tituloProjetos", "Projetos");
+    setText("btnProjetos", "Ver Projetos");
+    setText("proj1desc", "Plataforma de carteira de criptomoedas desenvolvida com React e Supabase.");
+    setText("proj2desc", "Ajustes e melhorias de interface em jogo online e manipulação de SQL.");
+    setText("proj3desc", "Prototipação no Figma e implementação da interface com React.");
+    setText("proj4desc", "Criação de layouts de alta fidelidade utilizando Figma.");
     setText("tituloFormacao", "Formação");
     setText("form1", "Ensino Médio Técnico em Multimídia");
     setText(
